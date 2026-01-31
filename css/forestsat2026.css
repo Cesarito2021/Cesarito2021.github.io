@@ -14,7 +14,7 @@ body{
    HERO
 ========================= */
 .hero{
-  height: 65vh; /* ridotto (prima 80vh) */
+  height:50vh; /* ridotto (prima 80vh) */
   background-image: url("../figures/ai_forest_lidar.jpg");
   background-size: cover;
   background-position: center;
@@ -25,7 +25,7 @@ body{
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.20);
 }
 
 .hero-overlay{
@@ -200,3 +200,4 @@ footer{
     padding: 22px 18px;
   }
 }
+
