@@ -1,0 +1,29 @@
+/* ForestSAT2026 custom theme */
+
+body {
+  background-color: #FFF2A8;  /* giallo workshop */
+}
+
+/* Contenuto centrale (per non affaticare gli occhi) */
+.main-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+/* Titoli */
+h1, h2, h3, h4 {
+  color: #2E5E3E; /* verde foresta */
+}
+
+/* TOC */
+#TOC {
+  background-color: #F7F3C6;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Codice */
+pre code {
+  background-color: #F0F0F0;
+}
