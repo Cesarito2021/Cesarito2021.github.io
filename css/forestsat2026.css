@@ -8,8 +8,8 @@ body {
 /* HERO */
 .hero {
   height: 80vh;
-  background-image: url("../figures/ai_forest_lidar.jpg");
-  background-size: cover;
+ background-image: url("../figures/ai_forest_lidar.jpg");
+ background-size: cover;
   background-position: center;
   position: relative;
 }
@@ -79,3 +79,4 @@ footer {
   text-align: center;
   color: #666;
 }
+
