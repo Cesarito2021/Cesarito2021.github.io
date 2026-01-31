@@ -10,9 +10,9 @@ body{
   line-height: 1.65;
 }
 
-/* Make text blocks readable */
+/* paragraphs FULL width (no 720px limit) */
 p{
-  max-width: 720px;
+  max-width: none;
   margin: 0 0 16px 0;
 }
 
@@ -44,7 +44,6 @@ p{
   z-index: 2;
 }
 
-/* IMPORTANT: style ONLY hero titles here (not global h1/h2) */
 .hero-overlay h1{
   font-size: 4rem;
   margin: 0;
@@ -58,15 +57,22 @@ p{
 }
 
 /* =========================
-   CONTENT LAYOUT
+   CONTENT LAYOUT (100% width)
 ========================= */
 .container{
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 70px 24px;
+  width: 100%;
+  max-width: none;     /* THIS is the key */
+  margin: 0;           /* no centering */
+  padding: 70px 60px;  /* space from edges */
 }
 
-/* Headings inside content only */
+/* On small screens reduce padding */
+@media (max-width: 900px){
+  .container{
+    padding: 55px 22px;
+  }
+}
+
 .container h2{
   font-size: 2rem;
   margin: 0 0 14px 0;
@@ -78,12 +84,12 @@ p{
   color: #2c3e35;
 }
 
-/* Lead text (subtitle line) */
+/* Lead text FULL width too */
 .lead{
   font-size: 1.15rem;
   line-height: 1.75;
   color: #4f6f61;
-  max-width: 720px;
+  max-width: none;
   margin-bottom: 22px;
 }
 
@@ -92,10 +98,23 @@ p{
 ========================= */
 .card{
   background: #fff;
-  padding: 24px;
-  border-radius: 12px;
+  padding: 28px 32px;
+  border-radius: 14px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   margin: 36px 0;
+}
+
+/* optional: a bigger “wide” card */
+.card.wide{
+  width: 100%;
+  padding: 44px 56px;
+}
+
+@media (max-width: 900px){
+  .card,
+  .card.wide{
+    padding: 22px 22px;
+  }
 }
 
 /* =========================
@@ -115,89 +134,8 @@ a:hover{
    AUTHOR (conference-style)
 ========================= */
 .author{
-  margin: 60px auto 50px;
+  margin: 60px 0 40px;
   text-align: center;
-  max-width: 720px;
-}
-
-.author-pic{
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
-}
-
-.author-name{
-  margin: 6px 0 4px;
-  font-size: 1.25rem;
-  font-weight: 800;
-}
-
-.author-role{
-  margin: 0 0 10px;
-  font-size: 0.92rem;
-  color: #2f5f4f;
-  line-height: 1.45;
-}
-
-.author-desc{
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin: 0 0 10px 0;
-}
-
-.author-links{
-  font-size: 0.95rem;
-}
-
-.author-links a{
-  font-weight: 700;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer{
-  margin-top: 60px;
-  font-size: 0.9rem;
-  text-align: center;
-  color: #666;
-}
-
-/* ---------- LAYOUT FIX: make content wider ---------- */
-.container{
-  max-width: 1280px;      /* prova 1200–1400 */
-  margin: 0 auto;
-  padding: 70px 28px;
-}
-
-/* remove the "narrow text" feeling */
-.card.wide{
-  width: 100%;
-  padding: 44px 56px;
-}
-
-/* keep paragraphs readable but not too narrow */
-.card.wide p{
-  max-width: 1050px;
-}
-
-/* headings spacing inside the wide card */
-.card.wide h2{
-  margin: 0 0 14px 0;
-}
-
-.card.wide h3{
-  margin-top: 26px;
-}
-
-/* author: conference style centered */
-.author{
-  margin: 55px auto 35px;
-  text-align: center;
-  max-width: 900px;
 }
 
 .author-pic{
@@ -205,7 +143,8 @@ footer{
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 16px;
+  margin: 16px auto 14px;
+  display: block;
   box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
@@ -227,13 +166,20 @@ footer{
   font-size: 0.98rem;
 }
 
+.author-links{
+  font-size: 0.95rem;
+}
+
 .author-links a{
   font-weight: 700;
-  text-decoration: none;
 }
 
-.author-links a:hover{
-  text-decoration: underline;
+/* =========================
+   FOOTER
+========================= */
+footer{
+  margin-top: 60px;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #666;
 }
-
-
