@@ -10,17 +10,11 @@ body{
   line-height: 1.65;
 }
 
-/* paragraphs FULL width (no 720px limit) */
-p{
-  max-width: none;
-  margin: 0 0 16px 0;
-}
-
 /* =========================
    HERO
 ========================= */
 .hero{
-  height: 80vh;
+  height: 65vh; /* ridotto (prima 80vh) */
   background-image: url("../figures/ai_forest_lidar.jpg");
   background-size: cover;
   background-position: center;
@@ -36,7 +30,7 @@ p{
 
 .hero-overlay{
   position: absolute;
-  bottom: 60px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -45,52 +39,43 @@ p{
 }
 
 .hero-overlay h1{
-  font-size: 4rem;
+  font-size: 3.2rem; /* ridotto */
   margin: 0;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 
 .hero-overlay h2{
-  font-size: 1.4rem;
+  font-size: 1.15rem; /* ridotto */
   font-weight: 300;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 /* =========================
-   CONTENT LAYOUT (100% width)
+   CONTENT LAYOUT
 ========================= */
 .container{
-  width: 100%;
-  max-width: none;     /* THIS is the key */
-  margin: 0;           /* no centering */
-  padding: 70px 60px;  /* space from edges */
-}
-
-/* On small screens reduce padding */
-@media (max-width: 900px){
-  .container{
-    padding: 55px 22px;
-  }
+  max-width: 1200px; /* più largo ma non enorme */
+  margin: 0 auto;
+  padding: 60px 24px; /* ridotto */
 }
 
 .container h2{
-  font-size: 2rem;
-  margin: 0 0 14px 0;
+  font-size: 1.85rem; /* ridotto */
+  margin: 0 0 12px 0;
 }
 
 .container h3{
-  font-size: 1.25rem;
-  margin: 26px 0 10px 0;
+  font-size: 1.2rem; /* ridotto */
+  margin: 22px 0 10px 0;
   color: #2c3e35;
 }
 
-/* Lead text FULL width too */
 .lead{
-  font-size: 1.15rem;
-  line-height: 1.75;
+  font-size: 1.08rem; /* ridotto */
+  line-height: 1.7;
   color: #4f6f61;
-  max-width: none;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
+  max-width: 980px; /* più largo della versione “stretta” */
 }
 
 /* =========================
@@ -98,23 +83,23 @@ p{
 ========================= */
 .card{
   background: #fff;
-  padding: 28px 32px;
+  padding: 20px;
   border-radius: 14px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  margin: 36px 0;
+  margin: 30px 0;
 }
 
-/* optional: a bigger “wide” card */
 .card.wide{
-  width: 100%;
-  padding: 44px 56px;
+  padding: 36px 44px; /* ridotto */
 }
 
-@media (max-width: 900px){
-  .card,
-  .card.wide{
-    padding: 22px 22px;
-  }
+/* Exercises list */
+.ex-list{
+  margin: 10px 0 0 18px;
+}
+
+.ex-list li{
+  margin: 10px 0;
 }
 
 /* =========================
@@ -134,36 +119,38 @@ a:hover{
    AUTHOR (conference-style)
 ========================= */
 .author{
-  margin: 60px 0 40px;
+  margin: 45px auto 30px; /* ridotto */
   text-align: center;
+  max-width: 900px;
 }
 
 .author-pic{
-  width: 120px;
-  height: 120px;
+  width: 105px;   /* ridotto */
+  height: 105px;  /* ridotto */
   border-radius: 50%;
   object-fit: cover;
-  margin: 16px auto 14px;
-  display: block;
+  margin-bottom: 14px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 .author-name{
   margin: 10px 0 6px;
-  font-size: 1.6rem;
+  font-size: 1.45rem; /* ridotto */
   font-weight: 800;
 }
 
 .author-role{
   margin: 0 0 12px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.5;
   color: #2f5f4f;
 }
 
 .author-desc{
-  margin: 0 0 10px;
+  margin: 0 auto 10px;
   font-size: 0.98rem;
+  line-height: 1.6;
+  max-width: 900px;
 }
 
 .author-links{
@@ -178,8 +165,38 @@ a:hover{
    FOOTER
 ========================= */
 footer{
-  margin-top: 60px;
+  margin-top: 50px;
   font-size: 0.9rem;
   text-align: center;
   color: #666;
+}
+
+/* =========================
+   MOBILE (small screens)
+========================= */
+@media (max-width: 700px){
+  .hero{
+    height: 55vh;
+  }
+
+  .hero-overlay{
+    bottom: 35px;
+    padding: 0 12px;
+  }
+
+  .hero-overlay h1{
+    font-size: 2.4rem;
+  }
+
+  .hero-overlay h2{
+    font-size: 1rem;
+  }
+
+  .container{
+    padding: 40px 18px;
+  }
+
+  .card.wide{
+    padding: 22px 18px;
+  }
 }
