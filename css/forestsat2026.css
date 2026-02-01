@@ -60,7 +60,7 @@ body{
 }
 
 .container h2{
-  font-size: 1.85rem; /* ridotto */
+  font-size: 1.95rem; /* ridotto */
   margin: 0 0 12px 0;
 }
 
@@ -200,6 +200,7 @@ footer{
     padding: 22px 18px;
   }
 }
+
 
 
 
