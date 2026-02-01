@@ -37,85 +37,40 @@
     </p>
   </section>
 
-<!-- ===== WORKSHOP INTRO ===== -->
-<section class="section">
-  <h2>ForestSAT2026 – LiDAR Hands-on Workshop</h2>
-  <p class="lead">
-    Mapping forest attributes using airborne laser scanning (ALS) and artificial intelligence (AI).
-  </p>
-</section>
+  <!-- ===== WORKSHOP FORMATS ===== -->
+  <section class="section">
+    <h3>Workshop Formats</h3>
 
-<section class="section">
-  <h3>Workshop aim and purpose</h3>
-  <p class="text">
-    This hands-on workshop introduces participants to the area-based approach for upscaling plot-level
-    forest attributes using Airborne Laser Scanning (ALS). Participants will learn how to process ALS data,
-    integrate field measurements, and generate wall-to-wall forest attribute maps for biomass and carbon assessment.
-  </p>
-</section>
+    <p class="text">
+      Materials are provided in reproducible formats commonly used in LiDAR workflows and data science.
+    </p>
 
-<!-- ===== WORKSHOP FORMATS (ADD THIS) ===== -->
-<section class="section">
-  <h3>Workshop Formats</h3>
+    <div class="badge-row">
+      <img src="https://img.shields.io/badge/code-R-blue?style=flat-square" alt="R code">
+      <img src="https://img.shields.io/badge/docs-R%20Markdown-brightgreen?style=flat-square" alt="R Markdown documents">
+      <img src="https://img.shields.io/badge/web-HTML-orange?style=flat-square" alt="HTML outputs">
+    </div>
 
-  <p class="text">
-    Materials are provided in reproducible formats commonly used in LiDAR workflows and data science.
-  </p>
+    <!-- Counters -->
+    <p class="text counters">
+      Total visualizations/exercises: <strong id="viz-count">0</strong>
+      &nbsp;·&nbsp;
+      Total downloads: <strong id="download-count">0</strong>
+    </p>
+  </section>
 
-  <div class="badge-row">
-    <img
-      src="https://img.shields.io/badge/code-R-blue?style=flat-square"
-      alt="R code"
-    >
-    <img
-      src="https://img.shields.io/badge/docs-R%20Markdown-brightgreen?style=flat-square"
-      alt="R Markdown documents"
-    >
-    <img
-      src="https://img.shields.io/badge/web-HTML-orange?style=flat-square"
-      alt="HTML outputs"
-    >
-  </div>
-</section>
+  <!-- ===== WORKSHOP & EXERCISES ===== -->
+  <section class="card wide section">
+    <h3>Workshop & Exercises</h3>
 
-<!-- ===== WORKSHOP & EXERCISES ===== -->
-<section class="card wide section">
-  <h3>Workshop & Exercises</h3>
-
-  <ul class="ex-list">
-
-    <li>
-      <a href="01_workshop/">
-        Workshop – ForestSAT2026 LiDAR Hands-on
-      </a>
-    </li>
-
-    <li>
-      <a href="01_exercise/">
-        Exercise 01 – Canopy Height and Canopy Cover Generation
-      </a>
-    </li>
-
-    <li>
-      <a href="02_exercise/">
-        Exercise 02 – Forest Structural Complexity Exploration
-      </a>
-    </li>
-
-    <li>
-      <a href="03_exercise/">
-        Exercise 03 – AGB Modelling and Mapping Using Linear Regression
-      </a>
-    </li>
-
-    <li>
-      <a href="04_exercise/">
-        Exercise 04 – AGB Modelling and Mapping Using Random Forest and XGBoost
-      </a>
-    </li>
-
-  </ul>
-</section>
+    <ul class="ex-list">
+      <li><a href="01_workshop/">Workshop – ForestSAT2026 LiDAR Hands-on</a></li>
+      <li><a href="01_exercise/">Exercise 01 – Canopy Height and Canopy Cover Generation</a></li>
+      <li><a href="02_exercise/">Exercise 02 – Forest Structural Complexity Exploration</a></li>
+      <li><a href="03_exercise/">Exercise 03 – AGB Modelling and Mapping Using Linear Regression</a></li>
+      <li><a href="04_exercise/">Exercise 04 – AGB Modelling and Mapping Using Random Forest and XGBoost</a></li>
+    </ul>
+  </section>
 
   <!-- ===== INSTRUCTOR ===== -->
   <section class="author section">
@@ -131,7 +86,7 @@
     </p>
 
     <p class="author-desc">
-      OpenForest4D</strong> project — web-based tools and educational resources
+      OpenForest4D project — web-based tools and educational resources
       supporting transformative research in forest science, ecosystem protection, and hazard mitigation.
     </p>
 
@@ -145,19 +100,58 @@
   <!-- ===== FOOTER ===== -->
   <footer>
     University of Florida · SilvaLab<br>
-    Workshop material – free and open for educational use
-  <!-- ===== FOOTER ===== -->
-<footer>
-  University of Florida · SilvaLab<br>
-  Workshop material – free and open for educational use<br>
-  <br>
-  © 2026 Cesar Alvites — Licensed under GNU GPL v3.0
-</footer>
+    Workshop material – free and open for educational use<br><br>
+    © 2026 Cesar Alvites — Licensed under GNU GPL v3.0
+  </footer>
 
 </div>
-  
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1) Count "visualizations" as number of list items
+    const items = document.querySelectorAll(".ex-list li");
+    const vizCountEl = document.getElementById("viz-count");
+    if (vizCountEl) vizCountEl.textContent = items.length;
+
+    // 2) Add download buttons automatically for each list item
+    // Assumes each folder contains index.html (e.g., 01_exercise/index.html)
+    items.forEach((li) => {
+      const a = li.querySelector("a[href]");
+      if (!a) return;
+
+      const href = a.getAttribute("href"); // e.g. "01_exercise/"
+      const normalized = href.endsWith("/") ? href : href + "/";
+      const downloadUrl = normalized + "index.html";
+
+      li.classList.add("ex-item");
+
+      const btn = document.createElement("a");
+      btn.className = "ex-download";
+      btn.href = downloadUrl;
+      btn.textContent = "Download HTML";
+      btn.setAttribute("download", "");
+
+      // 3) Count total downloads (clicks) in localStorage
+      btn.addEventListener("click", () => {
+        const key = "lidarbook_total_downloads";
+        const current = Number(localStorage.getItem(key) || "0");
+        const next = current + 1;
+        localStorage.setItem(key, String(next));
+        const el = document.getElementById("download-count");
+        if (el) el.textContent = next;
+      });
+
+      li.appendChild(btn);
+    });
+
+    // Initialize download counter from localStorage
+    const key = "lidarbook_total_downloads";
+    const saved = Number(localStorage.getItem(key) || "0");
+    const downloadCountEl = document.getElementById("download-count");
+    if (downloadCountEl) downloadCountEl.textContent = saved;
+  });
+</script>
+
 </body>
 </html>
-
-
-
