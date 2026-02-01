@@ -14,10 +14,10 @@ body{
    HERO
 ========================= */
 .hero{
-  height:40vh; /* ridotto (prima 80vh) */
+  height:60vh; /* ridotto (prima 80vh) */
   background-image: url("../figures/ai_forest_lidar.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center 35%;
   position: relative;
 }
 
@@ -252,3 +252,4 @@ footer{
     height: 20px;
   }
 }
+
