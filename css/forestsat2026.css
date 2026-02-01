@@ -54,7 +54,7 @@ body{
    CONTENT LAYOUT
 ========================= */
 .container{
-  max-width: 1000px; /* più largo ma non enorme */
+  max-width: 1200px; /* più largo ma non enorme */
   margin: 0 auto;
   padding: 60px 24px; /* ridotto */
 }
@@ -200,5 +200,6 @@ footer{
     padding: 22px 18px;
   }
 }
+
 
 
