@@ -56,7 +56,7 @@
 
     <!-- Counters -->
     <p class="text counters">
-      Total visualizations/exercises: <strong id="viz-count">0</strong>
+      Total exercises: <strong id="viz-count">0</strong>
       &nbsp;·&nbsp;
       Total downloads: <strong id="download-count">0</strong>
     </p>
@@ -67,11 +67,12 @@
     <h3>Workshop & Exercises</h3>
 
     <ul class="ex-list">
-      <li><a href="01_workshop/">Workshop – ForestSAT2026 LiDAR Hands-on Workshop</a></li>
+      <li class="workshop-item"><a href="01_workshop/">Workshop – ForestSAT2026 LiDAR Hands-on Workshop</a></li>
       <li><a href="01_exercise/">Exercise 01 – Canopy Height and Canopy Cover Generation</a></li>
       <li><a href="02_exercise/">Exercise 02 – Forest Structural Complexity Exploration</a></li>
       <li><a href="03_exercise/">Exercise 03 – AGB Modelling and Mapping Using Linear Regression</a></li>
       <li><a href="04_exercise/">Exercise 04 – AGB Modelling and Mapping Using Random Forest and XGBoost</a></li>
+      <li><a href="05_exercise/">Exercise 05 – LAScatalog () - AGB Modelling and Mapping Using Random Forest</a></li>
     </ul>
   </section>
 
@@ -112,18 +113,23 @@
 <!-- ================= SCRIPTS ================= -->
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    // 1) Count "visualizations" as number of list items
-    const items = document.querySelectorAll(".ex-list li");
-    const vizCountEl = document.getElementById("viz-count");
-    if (vizCountEl) vizCountEl.textContent = items.length;
 
-    // 2) Add download buttons automatically for each list item
-    // Assumes each folder contains index.html (e.g., 01_exercise/index.html)
-    items.forEach((li) => {
+    const listItems = document.querySelectorAll(".ex-list li");
+
+    // Count ONLY exercises (skip workshop)
+    const exercises = document.querySelectorAll(".ex-list li:not(.workshop-item)");
+    const vizCountEl = document.getElementById("viz-count");
+    if (vizCountEl) vizCountEl.textContent = exercises.length;
+
+    listItems.forEach((li) => {
+
+      // Skip workshop download button
+      if (li.classList.contains("workshop-item")) return;
+
       const a = li.querySelector("a[href]");
       if (!a) return;
 
-      const href = a.getAttribute("href"); // e.g. "01_exercise/"
+      const href = a.getAttribute("href");
       const normalized = href.endsWith("/") ? href : href + "/";
       const downloadUrl = normalized + "index.html";
 
@@ -135,7 +141,7 @@
       btn.textContent = "Download HTML";
       btn.setAttribute("download", "");
 
-      // 3) Count total downloads (clicks) in localStorage
+      // download counter
       btn.addEventListener("click", () => {
         const key = "lidarbook_total_downloads";
         const current = Number(localStorage.getItem(key) || "0");
@@ -148,7 +154,7 @@
       li.appendChild(btn);
     });
 
-    // Initialize download counter from localStorage
+    // initialize counter
     const key = "lidarbook_total_downloads";
     const saved = Number(localStorage.getItem(key) || "0");
     const downloadCountEl = document.getElementById("download-count");
@@ -158,6 +164,3 @@
 
 </body>
 </html>
-
-
-
