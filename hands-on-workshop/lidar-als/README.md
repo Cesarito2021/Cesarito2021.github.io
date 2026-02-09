@@ -1,1 +1,0 @@
-ALS LiDAR workshop material
