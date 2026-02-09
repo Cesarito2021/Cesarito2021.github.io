@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lesson 01 — JavaScript Basics</title>
+<title>Wall-to-wall Forest Biomass Mapping (GEE)</title>
 <link rel="stylesheet" href="/css/forestsat2026.css">
 </head>
 
@@ -11,90 +11,101 @@
 
 <section class="hero">
   <div class="hero-overlay">
-    <h1>Lesson 01</h1>
-    <h2>JavaScript Basics before ee.* objects</h2>
+    <h1>Google Earth Engine Workshop</h1>
+    <h2>Wall-to-wall forest biomass estimation</h2>
   </div>
 </section>
 
 <div class="container compact">
 
+<!-- ================= DESCRIPTION ================= -->
 <section class="section">
-<h2>Learning goals</h2>
+<h2>Workshop description</h2>
+
+<p class="text">
+Forest biomass is a key indicator for estimating forest carbon stocks. Biomass maps help
+identify carbon pools, explore carbon credit opportunities, and support biodiversity
+conservation and ecosystem protection.
+</p>
+
+<p class="text">
+This hands-on workshop teaches a complete <strong>wall-to-wall biomass mapping workflow</strong>
+in Google Earth Engine (GEE). Participants will prepare biomass reference data using GEDI
+(Gridded Aboveground Biomass Density), train models, generate a continuous biomass map,
+evaluate accuracy, interpret spatial patterns, and export final products.
+</p>
+
+</section>
+
+<!-- ================= OBJECTIVES ================= -->
+<section class="section">
+<h2>Learning objectives</h2>
+
 <ul class="text">
-<li>Verify the Earth Engine Code Editor works</li>
-<li>Understand how <code>print()</code> outputs information</li>
-<li>Learn variables, arrays, and dictionaries</li>
-<li>Create a simple function</li>
+<li>Write and understand code in Google Earth Engine</li>
+<li>Access GEDI and satellite imagery datasets</li>
+<li>Design samples and build prediction models</li>
+<li>Produce wall-to-wall biomass maps</li>
+<li>Evaluate and interpret spatial results</li>
 </ul>
 </section>
 
+<!-- ================= AUDIENCE ================= -->
 <section class="section">
-<h2>Concept</h2>
+<h2>Target audience</h2>
 
 <p class="text">
-Google Earth Engine uses JavaScript as the interface language. Before analyzing satellite
-imagery, we first practice basic programming structures. All Earth Engine objects
-(<code>ee.Image</code>, <code>ee.FeatureCollection</code>, <code>ee.ImageCollection</code>)
-behave similarly to JavaScript objects.
+Students, researchers, and professionals in forestry, ecology, remote sensing, and
+environmental sciences interested in forest monitoring and geospatial analysis.
+Basic familiarity with Earth Engine coding is recommended.
 </p>
-
-<p class="text">
-This lesson prepares you to read and understand every script used in later remote sensing
-exercises.
-</p>
-
 </section>
 
+<!-- ================= OUTCOMES ================= -->
+<section class="section">
+<h2>Expected outcomes</h2>
+
+<ul class="text">
+<li>Produce a forest biomass map using GEE</li>
+<li>Use cloud-based geospatial analysis workflows</li>
+<li>Apply methods to ecological monitoring and resource management</li>
+</ul>
+</section>
+
+<!-- ================= SCHEDULE ================= -->
+<section class="section">
+<h2>Schedule</h2>
+
+<p class="text">
+January 14, 9:00 AM – 2:00 PM (EST)
+</p>
+</section>
+
+<!-- ================= LESSONS ================= -->
 <section class="card wide section">
 
-<h2>Open the script in Google Earth Engine</h2>
+<h2>Workshop lessons</h2>
 
-<p class="text">
-Click the link below. When the Code Editor opens, press <strong>Run</strong> and
-look at the <strong>Console panel</strong>.
-</p>
-
-<p class="text">
-👉 
-<a href="https://code.earthengine.google.com/0f403064e95a0d0c56a7861652a2efb2" target="_blank" rel="noopener">
-Open Lesson 01 in Earth Engine
-</a>
-</p>
-
-</section>
-
-<section class="section">
-
-<h2>Expected output</h2>
-
-<ul class="text">
-<li>"Hello World" printed in the Console</li>
-<li>City and population information</li>
-<li>A list of Florida cities</li>
-<li>A dictionary containing city attributes</li>
-<li>A greeting message returned by the function</li>
+<ul class="ex-list">
+<li><a href="01-lesson/">00 — JavaScript Basics</a></li>
+<li><a href="02-lesson/">01 — Client vs Server</a></li>
+<li><a href="03-lesson/">02 — Image Collections</a></li>
+<li><a href="04-lesson/">03 — Mosaics & Composites</a></li>
+<li><a href="05-lesson/">04 — Vegetation Indices</a></li>
+<li><a href="06-lesson/">05 — Landcover & Ecoregions</a></li>
+<li><a href="07-lesson/">06 — GEDI Biomass Reference Data</a></li>
+<li><a href="08-lesson/">07 — Wall-to-Wall Biomass Map</a></li>
+<li><a href="09-lesson/">08 — Accuracy Assessment</a></li>
+<li><a href="10-lesson/">09 — Biome Models</a></li>
+<li><a href="11-lesson/">10 — Embedding Datasets</a></li>
 </ul>
 
-</section>
-
-<section class="section">
-
-<h2>Questions</h2>
-
-<ol class="text">
-<li>Change the city name and re-run the script. What changes?</li>
-<li>Add another city to the array.</li>
-<li>Add a new attribute (e.g., country or year) to the dictionary.</li>
-<li>Modify the function to print: <code>Hello NAME, welcome to GEE!</code></li>
-</ol>
-
 <p class="text">
-<a href="../">← Back to GEE module</a>
+<a href="/hands-on-workshop/">← Back to labs</a>
 </p>
 
 </section>
 
 </div>
-
 </body>
 </html>
