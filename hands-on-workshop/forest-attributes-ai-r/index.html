@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LidarBook – ForestSAT2026</title>
+  <link rel="stylesheet" href="/css/forestsat2026.css">
+</head>
+
+<body>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-overlay">
+    <h1>LidarBook</h1>
+    <h2>led by Cesar Alvites</h2>
+  </div>
+</section>
+
+<!-- ================= MAIN CONTENT ================= -->
+<div class="container compact">
+
+  <!-- ===== WORKSHOP INTRO ===== -->
+  <section class="section">
+  <h2>LiDAR Hands-on Workshop</h2>
+  <p class="lead">
+  Instructor materials for the
+  <strong>Mapping of forest attributes using airborne laser scanning (ALS)
+  and artificial intelligence (AI) workshop</strong>,
+  prepared for ForestSAT 2026.
+  </p>
+</section>
+
+  <section class="section">
+    <h3>Workshop aim and purpose</h3>
+    <p class="text">
+ This hands-on workshop equips participants with the knowledge and tools to access, handle, process, generate, and interpret forest attribute maps from ALS datasets.
+ All work is conducted in R. Through guided exercises, participants learn to use ALS data, integrate field measurements, and create maps of forest attributes, 
+ including aboveground biomass and carbon stock, gaining insight into best practices and methodological limitations.
+    </p>
+  </section>
+
+  <!-- ===== WORKSHOP FORMATS ===== -->
+  <section class="section">
+    <h3>Workshop Formats</h3>
+
+    <p class="text">
+      Materials are provided in reproducible formats commonly used in LiDAR workflows and data science.
+    </p>
+
+    <div class="badge-row">
+      <img src="https://img.shields.io/badge/code-R-blue?style=flat-square" alt="R code">
+      <img src="https://img.shields.io/badge/docs-R%20Markdown-brightgreen?style=flat-square" alt="R Markdown documents">
+      <img src="https://img.shields.io/badge/web-HTML-orange?style=flat-square" alt="HTML outputs">
+    </div>
+
+    <!-- Counters -->
+    <p class="text counters">
+      Total exercises: <strong id="viz-count">0</strong>
+      &nbsp;·&nbsp;
+      Total downloads: <strong id="download-count">0</strong>
+    </p>
+  </section>
+
+  <!-- ===== WORKSHOP & EXERCISES ===== -->
+  <section class="card wide section">
+    <h3>Workshop & Exercises</h3>
+
+    <ul class="ex-list">
+      <li class="workshop-item"><a href="01_workshop/">Workshop – ForestSAT2026 LiDAR Hands-on Workshop</a></li>
+      <li><a href="01_exercise/">Exercise 01 – Canopy Height and Canopy Cover Generation</a></li>
+      <li><a href="02_exercise/">Exercise 02 – Forest Structural Complexity Exploration</a></li>
+      <li><a href="03_exercise/">Exercise 03 – AGB Modelling and Mapping Using Linear Regression</a></li>
+      <li><a href="04_exercise/">Exercise 04 – AGB Modelling and Mapping Using Random Forest and XGBoost</a></li>
+      <li><a href="05_exercise/">Exercise 05 – LAScatalog () - AGB Modelling and Mapping Using Random Forest</a></li>
+    </ul>
+  </section>
+
+  <!-- ===== INSTRUCTOR ===== -->
+  <section class="author section">
+    <img src="/figures/cesar.jpg" alt="Cesar Alvites" class="author-pic">
+
+    <h3 class="author-name">Cesar Alvites</h3>
+
+    <p class="author-role">
+      Postdoctoral Researcher – University of Florida<br>
+      Forest Biometrics, Remote Sensing and AI Lab (SilvaLab)<br>
+      UF/IFAS School of Forest, Fisheries, and Geomatics Sciences<br>
+      Gainesville, Florida, USA
+    </p>
+
+    <p class="author-desc">
+      OpenForest4D project — web-based tools and educational resources
+      supporting transformative research in forest science, ecosystem protection, and hazard mitigation.
+    </p>
+
+    <p class="author-links">
+      <a href="https://openforest4d.org/" target="_blank" rel="noopener">OpenForest4D</a> ·
+      <a href="https://www.linkedin.com/in/cesaralvites/" target="_blank" rel="noopener">LinkedIn</a> ·
+      <a href="https://x.com/cesar_alvites" target="_blank" rel="noopener">X</a>
+    </p>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    University of Florida · SilvaLab<br>
+    Workshop material – free and open for educational use<br><br>
+    © 2026 Cesar Alvites — Licensed under GNU GPL v3.0
+  </footer>
+
+</div>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+    const listItems = document.querySelectorAll(".ex-list li");
+
+    // Count ONLY exercises (skip workshop)
+    const exercises = document.querySelectorAll(".ex-list li:not(.workshop-item)");
+    const vizCountEl = document.getElementById("viz-count");
+    if (vizCountEl) vizCountEl.textContent = exercises.length;
+
+    listItems.forEach((li) => {
+
+      // Skip workshop download button
+      if (li.classList.contains("workshop-item")) return;
+
+      const a = li.querySelector("a[href]");
+      if (!a) return;
+
+      const href = a.getAttribute("href");
+      const normalized = href.endsWith("/") ? href : href + "/";
+      const downloadUrl = new URL(normalized + "index.html", window.location.href).href;
+
+      li.classList.add("ex-item");
+
+      const btn = document.createElement("a");
+      btn.className = "ex-download";
+      btn.href = downloadUrl;
+      btn.textContent = "Download HTML";
+      btn.setAttribute("download", "");
+
+      // download counter
+      btn.addEventListener("click", () => {
+        const key = "lidarbook_total_downloads";
+        const current = Number(localStorage.getItem(key) || "0");
+        const next = current + 1;
+        localStorage.setItem(key, String(next));
+        const el = document.getElementById("download-count");
+        if (el) el.textContent = next;
+      });
+
+      li.appendChild(btn);
+    });
+
+    // initialize counter
+    const key = "lidarbook_total_downloads";
+    const saved = Number(localStorage.getItem(key) || "0");
+    const downloadCountEl = document.getElementById("download-count");
+    if (downloadCountEl) downloadCountEl.textContent = saved;
+  });
+</script>
+
+</body>
+</html>
