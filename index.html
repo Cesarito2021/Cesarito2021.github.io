@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LidarBook – ForestSAT2026</title>
-  <link rel="stylesheet" href="css/forestsat2026.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LidarBook — Code & Workflows</title>
+
+<link rel="stylesheet" href="/css/forestsat2026.css">
 </head>
 
 <body>
@@ -13,154 +14,127 @@
 <section class="hero">
   <div class="hero-overlay">
     <h1>LidarBook</h1>
-    <h2>led by Cesar Alvites</h2>
+    <h2>code, workflows, and companion materials</h2>
   </div>
 </section>
 
-<!-- ================= MAIN CONTENT ================= -->
 <div class="container compact">
 
-  <!-- ===== WORKSHOP INTRO ===== -->
-  <section class="section">
-  <h2>LiDAR Hands-on Workshop</h2>
-  <p class="lead">
-  Instructor materials for the
-  <strong>Mapping of forest attributes using airborne laser scanning (ALS)
-  and artificial intelligence (AI) workshop</strong>,
-  prepared for ForestSAT 2026.
+<!-- ================= INTRO ================= -->
+<section class="section">
+  <h2>About</h2>
+  <p class="text">
+    This site is a curated hub for <strong>R and Google Earth Engine (GEE)</strong> code,
+    processing workflows, and companion materials supporting my research and teaching.
+    The structure is designed to be simple to navigate and easy to extend over time.
   </p>
 </section>
 
-  <section class="section">
-    <h3>Workshop aim and purpose</h3>
-    <p class="text">
- This hands-on workshop equips participants with the knowledge and tools to access, handle, process, generate, and interpret forest attribute maps from ALS datasets.
- All work is conducted in R. Through guided exercises, participants learn to use ALS data, integrate field measurements, and create maps of forest attributes, 
- including aboveground biomass and carbon stock, gaining insight into best practices and methodological limitations.
-    </p>
-  </section>
+<!-- ================= UMBRELLA NAVIGATION ================= -->
+<section class="card wide section">
+  <h2>Start here</h2>
 
-  <!-- ===== WORKSHOP FORMATS ===== -->
-  <section class="section">
-    <h3>Workshop Formats</h3>
+  <ul class="ex-list">
+    <li>
+      <a href="/hands-on-workshops/"><strong>Hands-on labs</strong></a><br>
+      <span class="text">Practical exercises and guided walkthroughs (R / LiDAR / GEE).</span>
+    </li>
+    <li>
+      <a href="/research/"><strong>Research products</strong></a><br>
+      <span class="text">Paper companion pages, reproducible pipelines, apps, and tools.</span>
+    </li>
+  </ul>
+</section>
 
-    <p class="text">
-      Materials are provided in reproducible formats commonly used in LiDAR workflows and data science.
-    </p>
+<!-- ================= FEATURED LAB (R / ALS) ================= -->
+<section class="card wide section">
+  <h3>Featured lab: Forest attributes (R / ALS)</h3>
 
-    <div class="badge-row">
-      <img src="https://img.shields.io/badge/code-R-blue?style=flat-square" alt="R code">
-      <img src="https://img.shields.io/badge/docs-R%20Markdown-brightgreen?style=flat-square" alt="R Markdown documents">
-      <img src="https://img.shields.io/badge/web-HTML-orange?style=flat-square" alt="HTML outputs">
-    </div>
+  <p class="text">
+    A practical set of modules for processing airborne LiDAR (ALS) and mapping forest attributes.
+    Includes HTML outputs and reproducible materials.
+  </p>
 
-    <!-- Counters -->
-    <p class="text counters">
-      Total exercises: <strong id="viz-count">0</strong>
-      &nbsp;·&nbsp;
-      Total downloads: <strong id="download-count">0</strong>
-    </p>
-  </section>
+  <ul class="ex-list">
 
-  <!-- ===== WORKSHOP & EXERCISES ===== -->
-  <section class="card wide section">
-    <h3>Workshop & Exercises</h3>
+    <li class="workshop-item">
+      <a href="/hands-on-workshops/forest-attributes-ai-r/01_workshop/">
+        Lab overview — Forest attributes using ALS & AI (R)
+      </a>
+    </li>
 
-    <ul class="ex-list">
-      <li class="workshop-item"><a href="01_workshop/">Workshop – ForestSAT2026 LiDAR Hands-on Workshop</a></li>
-      <li><a href="01_exercise/">Exercise 01 – Canopy Height and Canopy Cover Generation</a></li>
-      <li><a href="02_exercise/">Exercise 02 – Forest Structural Complexity Exploration</a></li>
-      <li><a href="03_exercise/">Exercise 03 – AGB Modelling and Mapping Using Linear Regression</a></li>
-      <li><a href="04_exercise/">Exercise 04 – AGB Modelling and Mapping Using Random Forest and XGBoost</a></li>
-      <li><a href="05_exercise/">Exercise 05 – LAScatalog () - AGB Modelling and Mapping Using Random Forest</a></li>
-    </ul>
-  </section>
+    <li>
+      <a href="/hands-on-workshops/forest-attributes-ai-r/01_exercise/">
+        Module 01 — Canopy Height and Canopy Cover Generation
+      </a>
+    </li>
 
-  <!-- ===== INSTRUCTOR ===== -->
-  <section class="author section">
-    <img src="figures/cesar.jpg" alt="Cesar Alvites" class="author-pic">
+    <li>
+      <a href="/hands-on-workshops/forest-attributes-ai-r/02_exercise/">
+        Module 02 — Forest Structural Complexity Exploration
+      </a>
+    </li>
 
-    <h3 class="author-name">Cesar Alvites</h3>
+    <li>
+      <a href="/hands-on-workshops/forest-attributes-ai-r/03_exercise/">
+        Module 03 — AGB Modelling and Mapping Using Linear Regression
+      </a>
+    </li>
 
-    <p class="author-role">
-      Postdoctoral Researcher – University of Florida<br>
-      Forest Biometrics, Remote Sensing and AI Lab (SilvaLab)<br>
-      UF/IFAS School of Forest, Fisheries, and Geomatics Sciences<br>
-      Gainesville, Florida, USA
-    </p>
+    <li>
+      <a href="/hands-on-workshops/forest-attributes-ai-r/04_exercise/">
+        Module 04 — AGB Modelling and Mapping Using Random Forest and XGBoost
+      </a>
+    </li>
 
-    <p class="author-desc">
-      OpenForest4D project — web-based tools and educational resources
-      supporting transformative research in forest science, ecosystem protection, and hazard mitigation.
-    </p>
+    <li>
+      <a href="/hands-on-workshops/forest-attributes-ai-r/05_exercise/">
+        Module 05 — LAScatalog() — AGB Modelling and Mapping Using Random Forest
+      </a>
+    </li>
 
-    <p class="author-links">
-      <a href="https://openforest4d.org/" target="_blank" rel="noopener">OpenForest4D</a> ·
-      <a href="https://www.linkedin.com/in/cesaralvites/" target="_blank" rel="noopener">LinkedIn</a> ·
-      <a href="https://x.com/cesar_alvites" target="_blank" rel="noopener">X</a>
-    </p>
-  </section>
+  </ul>
 
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    University of Florida · SilvaLab<br>
-    Workshop material – free and open for educational use<br><br>
-    © 2026 Cesar Alvites — Licensed under GNU GPL v3.0
-  </footer>
+  <p class="text">
+    <a href="/hands-on-workshops/">View all hands-on labs →</a>
+  </p>
+</section>
+
+<!-- ================= AUTHOR ================= -->
+<section class="author section">
+
+  <img src="/figures/cesar.jpg" alt="Cesar Alvites" class="author-pic">
+
+  <h3 class="author-name">Cesar Alvites</h3>
+
+  <p class="author-role">
+    Postdoctoral Researcher – University of Florida<br>
+    Forest Biometrics, Remote Sensing and AI Lab (SilvaLab)<br>
+    UF/IFAS School of Forest, Fisheries, and Geomatics Sciences<br>
+    Gainesville, Florida, USA
+  </p>
+
+  <p class="author-desc">
+    OpenForest4D project — web-based tools and educational resources
+    supporting research in forest science, ecosystem protection, and hazard mitigation.
+  </p>
+
+  <p class="author-links">
+    <a href="https://openforest4d.org/" target="_blank" rel="noopener">OpenForest4D</a> ·
+    <a href="https://www.linkedin.com/in/cesaralvites/" target="_blank" rel="noopener">LinkedIn</a> ·
+    <a href="https://x.com/cesar_alvites" target="_blank" rel="noopener">X</a>
+  </p>
+
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+University of Florida · SilvaLab<br>
+Materials are free and open for educational and research use<br><br>
+© 2026 Cesar Alvites — Licensed under GNU GPL v3.0
+</footer>
 
 </div>
-
-<!-- ================= SCRIPTS ================= -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-
-    const listItems = document.querySelectorAll(".ex-list li");
-
-    // Count ONLY exercises (skip workshop)
-    const exercises = document.querySelectorAll(".ex-list li:not(.workshop-item)");
-    const vizCountEl = document.getElementById("viz-count");
-    if (vizCountEl) vizCountEl.textContent = exercises.length;
-
-    listItems.forEach((li) => {
-
-      // Skip workshop download button
-      if (li.classList.contains("workshop-item")) return;
-
-      const a = li.querySelector("a[href]");
-      if (!a) return;
-
-      const href = a.getAttribute("href");
-      const normalized = href.endsWith("/") ? href : href + "/";
-      const downloadUrl = normalized + "index.html";
-
-      li.classList.add("ex-item");
-
-      const btn = document.createElement("a");
-      btn.className = "ex-download";
-      btn.href = downloadUrl;
-      btn.textContent = "Download HTML";
-      btn.setAttribute("download", "");
-
-      // download counter
-      btn.addEventListener("click", () => {
-        const key = "lidarbook_total_downloads";
-        const current = Number(localStorage.getItem(key) || "0");
-        const next = current + 1;
-        localStorage.setItem(key, String(next));
-        const el = document.getElementById("download-count");
-        if (el) el.textContent = next;
-      });
-
-      li.appendChild(btn);
-    });
-
-    // initialize counter
-    const key = "lidarbook_total_downloads";
-    const saved = Number(localStorage.getItem(key) || "0");
-    const downloadCountEl = document.getElementById("download-count");
-    if (downloadCountEl) downloadCountEl.textContent = saved;
-  });
-</script>
 
 </body>
 </html>
