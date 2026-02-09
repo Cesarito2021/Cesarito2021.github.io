@@ -1,111 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wall-to-wall Forest Biomass Mapping (GEE)</title>
-<link rel="stylesheet" href="/css/forestsat2026.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GEE Biomass Workshop</title>
+  <link rel="stylesheet" href="/css/forestsat2026.css">
 </head>
 
 <body>
 
+<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-overlay">
-    <h1>Google Earth Engine Workshop</h1>
-    <h2>Wall-to-wall forest biomass estimation</h2>
+    <h1>LidarBook</h1>
+    <h2>led by Cesar Alvites</h2>
   </div>
 </section>
 
+<!-- ================= MAIN CONTENT ================= -->
 <div class="container compact">
 
-<!-- ================= DESCRIPTION ================= -->
-<section class="section">
-<h2>Workshop description</h2>
+  <!-- ===== WORKSHOP INTRO ===== -->
+  <section class="section">
+    <h2>Google Earth Engine Hands-on Workshop</h2>
 
-<p class="text">
-Forest biomass is a key indicator for estimating forest carbon stocks. Biomass maps help
-identify carbon pools, explore carbon credit opportunities, and support biodiversity
-conservation and ecosystem protection.
-</p>
+    <p class="lead">
+      <strong>Wall-to-wall forest biomass estimation using Google Earth Engine</strong>
+    </p>
+  </section>
 
-<p class="text">
-This hands-on workshop teaches a complete <strong>wall-to-wall biomass mapping workflow</strong>
-in Google Earth Engine (GEE). Participants will prepare biomass reference data using GEDI
-(Gridded Aboveground Biomass Density), train models, generate a continuous biomass map,
-evaluate accuracy, interpret spatial patterns, and export final products.
-</p>
+  <!-- ===== DESCRIPTION ===== -->
+  <section class="section">
+    <h3>Description</h3>
 
-</section>
+    <p class="text">
+      Forest biomass is a key indicator for estimating forest carbon stocks. Biomass maps help identify
+      carbon pools, explore carbon credit opportunities, and connect these insights to biodiversity
+      conservation and protection.
+    </p>
 
-<!-- ================= OBJECTIVES ================= -->
-<section class="section">
-<h2>Learning objectives</h2>
+    <p class="text">
+      Wall-to-wall mapping uses reference biomass data to produce a continuous, full-coverage biomass
+      map across forested landscapes. This hands-on workshop teaches a well-documented wall-to-wall
+      mapping workflow in Google Earth Engine (GEE). Through guided exercises, participants will learn how
+      to prepare biomass reference data (<strong>GEDI L4A/L4B</strong>), generate a wall-to-wall biomass map,
+      evaluate accuracy, interpret spatial patterns, and download final outputs.
+    </p>
 
-<ul class="text">
-<li>Write and understand code in Google Earth Engine</li>
-<li>Access GEDI and satellite imagery datasets</li>
-<li>Design samples and build prediction models</li>
-<li>Produce wall-to-wall biomass maps</li>
-<li>Evaluate and interpret spatial results</li>
-</ul>
-</section>
+    <p class="text">
+      By the end, participants will have practical skills that can be applied to ecological monitoring
+      and resource management.
+    </p>
+  </section>
 
-<!-- ================= AUDIENCE ================= -->
-<section class="section">
-<h2>Target audience</h2>
+  <!-- ===== LEARNING OBJECTIVES ===== -->
+  <section class="section">
+    <h3>Learning objectives</h3>
 
-<p class="text">
-Students, researchers, and professionals in forestry, ecology, remote sensing, and
-environmental sciences interested in forest monitoring and geospatial analysis.
-Basic familiarity with Earth Engine coding is recommended.
-</p>
-</section>
+    <ul class="text">
+      <li>Writing code in Google Earth Engine (GEE)</li>
+      <li>Accessing GEDI and satellite imagery datasets through GEE</li>
+      <li>Designing samples, building models, and producing wall-to-wall maps</li>
+    </ul>
 
-<!-- ================= OUTCOMES ================= -->
-<section class="section">
-<h2>Expected outcomes</h2>
+    <p class="text">
+      This course is supported by step-by-step tutorials and example materials to guide participants
+      through in-depth analysis.
+    </p>
+  </section>
 
-<ul class="text">
-<li>Produce a forest biomass map using GEE</li>
-<li>Use cloud-based geospatial analysis workflows</li>
-<li>Apply methods to ecological monitoring and resource management</li>
-</ul>
-</section>
+  <!-- ===== TARGET AUDIENCE / FORMAT ===== -->
+  <section class="section">
+    <h3>Target audience</h3>
+    <p class="text">
+      Students, researchers, and professionals in forestry, ecology, remote sensing, or environmental
+      sciences interested in scalable tools for forest monitoring. Basic GEE coding knowledge is recommended.
+    </p>
 
-<!-- ================= SCHEDULE ================= -->
-<section class="section">
-<h2>Schedule</h2>
+    <h3>Format & activities</h3>
+    <ul class="text">
+      <li>Short lectures and live demonstrations</li>
+      <li>Step-by-step guided exercises in GEE</li>
+      <li>Tutorials and example applications for extended practice</li>
+    </ul>
 
-<p class="text">
-January 14, 9:00 AM – 2:00 PM (EST)
-</p>
-</section>
+    <h3>Expected outcomes</h3>
+    <ul class="text">
+      <li>Build a wall-to-wall forest biomass map using GEE</li>
+      <li>Confidently use GEE for geospatial analysis and forest monitoring workflows</li>
+    </ul>
 
-<!-- ================= LESSONS ================= -->
-<section class="card wide section">
+    <h3>Language & requirements</h3>
+    <ul class="text">
+      <li>Language: English</li>
+      <li>Requirements: Computer + Google Earth Engine access (web-based)</li>
+    </ul>
 
-<h2>Workshop lessons</h2>
+    <h3>Schedule</h3>
+    <p class="text">
+      January 14, 9:00 AM – 2:00 PM (EST)
+    </p>
+  </section>
 
-<ul class="ex-list">
-<li><a href="01-lesson/">00 — JavaScript Basics</a></li>
-<li><a href="02-lesson/">01 — Client vs Server</a></li>
-<li><a href="03-lesson/">02 — Image Collections</a></li>
-<li><a href="04-lesson/">03 — Mosaics & Composites</a></li>
-<li><a href="05-lesson/">04 — Vegetation Indices</a></li>
-<li><a href="06-lesson/">05 — Landcover & Ecoregions</a></li>
-<li><a href="07-lesson/">06 — GEDI Biomass Reference Data</a></li>
-<li><a href="08-lesson/">07 — Wall-to-Wall Biomass Map</a></li>
-<li><a href="09-lesson/">08 — Accuracy Assessment</a></li>
-<li><a href="10-lesson/">09 — Biome Models</a></li>
-<li><a href="11-lesson/">10 — Embedding Datasets</a></li>
-</ul>
+  <!-- ===== WORKSHOP LESSONS ===== -->
+  <section class="card wide section">
+    <h3>Workshop lessons</h3>
 
-<p class="text">
-<a href="/hands-on-workshop/">← Back to labs</a>
-</p>
+    <ul class="ex-list">
+      <li><a href="01-lesson/">00 — Intro: JavaScript Basics</a></li>
+      <li><a href="02-lesson/">01 — GEE Client vs Server</a></li>
+      <li><a href="03-lesson/">02 — Image Collections</a></li>
+      <li><a href="04-lesson/">03 — Composites, Mosaics, and Median</a></li>
+      <li><a href="05-lesson/">04 — Vegetation Indices</a></li>
+      <li><a href="06-lesson/">05 — Landcover & Ecoregions</a></li>
+      <li><a href="07-lesson/">06 — Reference Biomass (GEDI L4A/L4B)</a></li>
+      <li><a href="08-lesson/">07 — Wall-to-wall AGBD Map</a></li>
+      <li><a href="09-lesson/">08 — Accuracy Assessment</a></li>
+      <li><a href="10-lesson/">09 — Wall-to-wall AGBD Map (BIOME)</a></li>
+      <li><a href="11-lesson/">10 — Embedding Datasets</a></li>
+    </ul>
 
-</section>
+    <p class="text">
+      <a href="/hands-on-workshop/">← Back to hands-on labs</a>
+    </p>
+  </section>
+
+  <!-- ===== INSTRUCTOR ===== -->
+  <section class="author section">
+    <img src="/figures/cesar.jpg" alt="Cesar Alvites" class="author-pic">
+
+    <h3 class="author-name">Cesar Alvites</h3>
+
+    <p class="author-role">
+      School of Forest, Fisheries, and Geomatics Sciences, University of Florida<br>
+      Gainesville, FL 32611, USA
+    </p>
+
+    <p class="author-desc">
+      This material is developed independently but aligned with broader initiatives such as
+      <strong>OpenForest4D</strong>, which promotes web-based tools and educational resources
+      to advance the monitoring and management of global forest ecosystems. The labs and code
+      provided here share similar goals: supporting research, education, and reproducible workflows
+      in forest science, ecosystem protection, carbon assessment, and hazard mitigation.
+    </p>
+
+    <p class="author-links">
+      <a href="https://openforest4d.org/" target="_blank" rel="noopener">OpenForest4D</a> ·
+      <a href="https://www.linkedin.com/in/cesaralvites/" target="_blank" rel="noopener">LinkedIn</a> ·
+      <a href="https://x.com/cesar_alvites" target="_blank" rel="noopener">X</a>
+    </p>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    University of Florida · SilvaLab<br>
+    Materials are free and open for educational and research use<br><br>
+    © 2026 Cesar Alvites — Licensed under GNU GPL v3.0
+  </footer>
 
 </div>
+
 </body>
 </html>
