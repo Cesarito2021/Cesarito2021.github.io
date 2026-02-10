@@ -14,7 +14,7 @@ body{
    HERO
 ========================= */
 .hero{
-  height:60vh; /* ridotto (prima 80vh) */
+  height:60vh; /* reduced (was 80vh) */
   background-image: url("../figures/ai_forest_lidar.jpg");
   background-size: cover;
   background-position: center 35%;
@@ -39,13 +39,13 @@ body{
 }
 
 .hero-overlay h1{
-  font-size: 3.2rem; /* ridotto */
+  font-size: 3.2rem; /* reduced */
   margin: 0;
   letter-spacing: 1.5px;
 }
 
 .hero-overlay h2{
-  font-size: 1.15rem; /* ridotto */
+  font-size: 1.15rem; /* reduced */
   font-weight: 300;
   margin-top: 8px;
 }
@@ -54,28 +54,28 @@ body{
    CONTENT LAYOUT
 ========================= */
 .container{
-  max-width: 1200px; /* più largo ma non enorme */
+  max-width: 1200px; /* wider but not huge */
   margin: 0 auto;
-  padding: 60px 24px; /* ridotto */
+  padding: 60px 24px; /* reduced */
 }
 
 .container h2{
-  font-size: 1.95rem; /* ridotto */
+  font-size: 1.95rem; /* reduced */
   margin: 0 0 12px 0;
 }
 
 .container h3{
-  font-size: 1.2rem; /* ridotto */
+  font-size: 1.2rem; /* reduced */
   margin: 22px 0 10px 0;
   color: #2c3e35;
 }
 
 .lead{
-  font-size: 1.08rem; /* ridotto */
+  font-size: 1.08rem; /* reduced */
   line-height: 1.7;
   color: #4f6f61;
   margin-bottom: 18px;
-  max-width: 980px; /* più largo della versione “stretta” */
+  max-width: 980px;
 }
 
 /* =========================
@@ -90,7 +90,7 @@ body{
 }
 
 .card.wide{
-  padding: 36px 44px; /* ridotto */
+  padding: 36px 44px; /* reduced */
 }
 
 /* Exercises list */
@@ -116,10 +116,10 @@ a:hover{
 }
 
 /* =========================
-   BADGES + COUNTERS + DOWNLOAD BUTTONS  (ADDED)
+   BADGES + COUNTERS + DOWNLOAD BUTTONS
 ========================= */
 
-/* Your badges container already exists in HTML; this keeps sizing tidy */
+/* Badges container */
 .badge-row{
   display: flex;
   flex-wrap: wrap;
@@ -128,7 +128,7 @@ a:hover{
 }
 
 .badge-row img{
-  height: 22px;       /* consistent like GitHub badges */
+  height: 22px;
   display: inline-block;
 }
 
@@ -163,17 +163,60 @@ a:hover{
 }
 
 /* =========================
+   NEW: INDEX GRID (for "Learning & Resources")
+========================= */
+.grid-2{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 14px;
+}
+
+/* Inner cards inside the big card */
+.card-inner{
+  background: #f8fbf9;
+  border: 1px solid rgba(44, 62, 53, 0.10);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* Make inner-card titles feel clean */
+.card-inner h3{
+  margin-top: 0;
+}
+
+/* =========================
+   NEW: TECHNOLOGY TAGS
+========================= */
+.tech-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tech-tag{
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(44, 62, 53, 0.18);
+  background: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2c3e35;
+}
+
+/* =========================
    AUTHOR (conference-style)
 ========================= */
 .author{
-  margin: 45px auto 30px; /* ridotto */
+  margin: 45px auto 30px;
   text-align: center;
   max-width: 900px;
 }
 
 .author-pic{
-  width: 105px;   /* ridotto */
-  height: 105px;  /* ridotto */
+  width: 105px;
+  height: 105px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 14px;
@@ -182,7 +225,7 @@ a:hover{
 
 .author-name{
   margin: 10px 0 6px;
-  font-size: 1.45rem; /* ridotto */
+  font-size: 1.45rem;
   font-weight: 800;
 }
 
@@ -221,6 +264,12 @@ footer{
 /* =========================
    MOBILE (small screens)
 ========================= */
+@media (max-width: 800px){
+  .grid-2{
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 700px){
   .hero{
     height: 55vh;
@@ -252,4 +301,3 @@ footer{
     height: 20px;
   }
 }
-
